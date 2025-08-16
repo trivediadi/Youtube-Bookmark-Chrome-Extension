@@ -8,5 +8,5 @@ chrome.tabs.onUpdated.addListener((tabId,tab)=>{
             videoId: urlParameters.get("v")
             
         });
-    }
-})
+   
+}})
