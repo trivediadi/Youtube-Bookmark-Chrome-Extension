@@ -3,28 +3,28 @@
     "version":"0.1.0",
     "description":"Saving timestamps in YT videos",
     "permissions":["storage","tabs"],
-    "host_permission":["https://*.youtube.com/*"],
+    "host_permissions":["https://*.youtube.com/*"],
     "background":{
         "service_worker": "background.js"
     },
     "content_scripts":[{
         "matches":["https://*.youtube.com/*"],
-        "js":["content_scripts.js"]
+        "js":["content.js"]
 }],
     "web_accessible_resources":[{
         "resources":[
-            "assests/bookmark.png",
-            "assests/play.png",
-            "assests/delete.png",
-            "assests.save.png"
+            "images/bookmark.png",
+            "images/play.png",
+            "images/delete.png",
+            "images/save.png"
         ],
         "matches":["https://*.youtube.com/*"]
     }],
     "action":{
         "default_icon":{
-            "16":"assests/ext-icon.png",
-            "48":"assests/ext-icon.png",
-            "128":"assests/ext-icon.png"
+            "16":"images/ext-icon.png",
+            "48":"images/ext-icon.png",
+            "128":"images/ext-icon.png"
         },
         "default_title":"My YT BookMarks",
         "default_popup":"popup.html"
